@@ -7,13 +7,14 @@ module.exports = {
     development: {
       host: "localhost",
       port: 7545,
-      gas: 6500000,
+      gas: 7992222,
       network_id: "5777"
     },
     ropsten: {
-      provider: new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/" + process.env.INFURA_API_KEY),
+      provider: function () {
+        return new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/" + process.env.INFURA_API_KEY)
+      },
       network_id: 3,
-      gas: 4500000
     },
   }
 };
