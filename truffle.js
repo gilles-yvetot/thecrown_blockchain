@@ -15,7 +15,25 @@ module.exports = {
         return new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/" + process.env.INFURA_API_KEY)
       },
       network_id: 3,
-      gas: 6992222,
+      gas: 4690000,
+    },
+    rinkeby: {
+      provider: function () {
+        return new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/" + process.env.INFURA_API_KEY)
+      },
+      network_id: 4,
+    },
+    kovan: {
+      provider: function () {
+        return new HDWalletProvider(process.env.MNENOMIC, "https://kovan.infura.io/" + process.env.INFURA_API_KEY)
+      },
+      network_id: 42,
+    },
+    live: {
+      provider: function () {
+        return new HDWalletProvider(process.env.MNENOMIC, "https://mainnet.infura.io/" + process.env.INFURA_API_KEY)
+      },
+      network_id: 1
     },
   }
 };
