@@ -23,5 +23,11 @@ Once developed, you will need to update the `migrations` scripts, most likely `2
 
 Then:
 
-- `truffle compile --network {networkName}` to compile your contracts artifcats into `builds/contracts`. Those are the files you will need in `thecrown_client`.
-- `truffle migrate --network {networkName}` to deploy them to the network. Please be sure to take note of the last address displayed in the console. This is where your contract is deployed.
+- `truffle develop --network {networkName}`
+- `truffle compile` to compile your contracts artifcats into `builds/contracts`. Those are the files you will need in `thecrown_client`.
+- `truffle migrate` to deploy them to the network. You can take note of the last address displayed in the console. This is the address where your contract is deployed.
+
+- `CrownTokenCrowdsale.deployed().then(inst=>{ crowdsale = inst})` to get the Crowdsale contract instance
+- `crowdsale.token().then(addr => { tokenAddress = addr } )` to get the crowd sale token address
+- `crownTokenInstance = CrownToken.at(tokenAddress)` to get the crown token address
+- `crownTokenInstance.transferOwnership(crowdsale.address)` to change token ownership to crowdsale so it is able to mint tokens during crowdsale
