@@ -5,10 +5,10 @@ import "../node_modules/openzeppelin-solidity/contracts/crowdsale/emission/Minte
 
 
 contract CrownTokenCrowdsale is MintedCrowdsale {
-    constructor(
-      uint256 _rate,
-      address _wallet,
-      CrownToken _token) public 
-      Crowdsale(_rate, _wallet, _token){
-    }
+  constructor(
+    uint256 _rate,
+    address _wallet,
+    CrownToken _token) public 
+    Crowdsale(_rate, _wallet, _token) {
+  }
 }

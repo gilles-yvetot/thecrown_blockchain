@@ -21,6 +21,7 @@ module.exports = {
       provider: function () {
         return new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/" + process.env.INFURA_API_KEY)
       },
+      gas: 4700000,
       network_id: 4,
     },
     kovan: {
@@ -28,6 +29,7 @@ module.exports = {
         return new HDWalletProvider(process.env.MNENOMIC, "https://kovan.infura.io/" + process.env.INFURA_API_KEY)
       },
       network_id: 42,
+      gas: 4700000,      
     },
     live: {
       provider: function () {
