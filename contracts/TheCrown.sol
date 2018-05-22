@@ -1,4 +1,4 @@
-pragma solidity 0.4.23;
+pragma solidity 0.4.24;
 
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Basic.sol";
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol";
@@ -7,7 +7,7 @@ import "../node_modules/openzeppelin-solidity/contracts/AddressUtils.sol";
 
 
 contract TheCrown is ERC721Basic {
-    
+
     string public name = "TheCrown";
     string public symbol = "Crown";
     uint8 public decimals = 0;
@@ -294,5 +294,5 @@ contract TheCrown is ERC721Basic {
       }
       bytes4 retval = ERC721Receiver(_to).onERC721Received(_from, _tokenId, _data);
       return (retval == ERC721_RECEIVED);
-    } 
+    }
 }
